@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int n = 5;
+	int n = 1;
 
-	while (n >= -5)
+	while (n >= -1)
 	{
 		if (n > 0)
 		{
