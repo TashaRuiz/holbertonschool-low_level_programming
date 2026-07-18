@@ -6,7 +6,7 @@
  * integer positive, equal and negative
  */
 
-/*
+
 int main(void)
 {
 	int n = 5;
@@ -29,8 +29,9 @@ int main(void)
 	}
 	
 }return (0)
-*/
 
+
+/*
 int main(void)
 {
 	int n;
@@ -50,6 +51,6 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-
 	return (0);
 }
+*/
