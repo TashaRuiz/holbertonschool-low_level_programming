@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
- * Making a code than ran
- *
- * integer positive, equal and negative
- *
- */
+*
+*main - Entry point
+*
+*Return: Always 0 (Success)
+*/
 
 int main(void)
 {
