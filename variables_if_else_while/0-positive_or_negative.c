@@ -6,7 +6,7 @@
  * integer positive, equal and negative
  */
 
-/*int main(void)
+int main(void)
 {
 	int n = 5;
 
@@ -28,9 +28,9 @@
 	}
 	return (0);
 }
-*/
 
-int main(void)
+
+/*int main(void)
 {
 	int n;
 
@@ -51,4 +51,4 @@ int main(void)
 	}
 
 	return (0);
-}
+}*/
