@@ -10,7 +10,7 @@ int main(void)
 {
 	int n = 5;
 
-	while (1)
+	while (n >= -5)
 	{
 		if (n > 0)
 		{
@@ -24,7 +24,7 @@ int main(void)
 		{
 			printf("%d is negative\n", n);
 		}
-		break;
+		n--;
 	}
 	return (0);
 }
