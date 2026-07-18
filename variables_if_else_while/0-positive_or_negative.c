@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <time.h>
+//#include <time.h>
 /**
  * Making a code than ran
  *
  * integer positive, equal and negative
  */
-
 
 int main(void)
 {
@@ -27,8 +26,8 @@ int main(void)
 		}
 		n--;
 	}
-	
-}return (0)
+	return (0);
+}
 
 
 /*
