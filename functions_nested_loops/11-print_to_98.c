@@ -10,11 +10,16 @@ void print_to_98(int num)
 {
 	while (num <= 98)
 	{
-		printf(%d,' ', num);
-		num++;
-		
 		if (num == 98)
+		{
 			break;
+		}
+		
+		else
+		{
+			printf(%d, ", num);
+			num++;
+		}
 	}
 	printf("98\n");
 }
