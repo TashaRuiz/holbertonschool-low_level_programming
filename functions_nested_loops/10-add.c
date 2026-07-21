@@ -4,7 +4,7 @@
  *@a: first
  *@b: second
  *
- *return: the sum of a and b
+ *Return: the sum of a and b
  */
 
 int add(int a, int b)
