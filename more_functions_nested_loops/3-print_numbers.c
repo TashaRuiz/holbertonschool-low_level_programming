@@ -1,5 +1,5 @@
 #include "main.h"
-#include <unistd.h>
+
 /**
  *print_numbers - print number from 0 to 9
  *
