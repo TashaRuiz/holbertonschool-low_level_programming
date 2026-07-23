@@ -2,7 +2,8 @@
 
 /**
  *int mul() - multiply the two integers
- *@a, b: assigned integers
+ *@a: first integers
+ *@b: second integer
  *
  *Return: the result of the multiply
  */
