@@ -6,11 +6,11 @@
  *
  * Return: Nothing
  */
-void print_line(int num)
+void print_line(int n)
 {
 	int i;
 
-	for (i = 0; i < num; i++)
+	for (i = 0; i < n; i++)
 	{
 		_putchar('_');
 	}
