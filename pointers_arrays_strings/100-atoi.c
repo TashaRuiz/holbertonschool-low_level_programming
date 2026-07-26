@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int result = 0;
 	int found = 0;
 
-	 while (s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 		{
