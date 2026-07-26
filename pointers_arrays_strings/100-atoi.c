@@ -28,7 +28,7 @@ int _atoi(char *s)
 				i++;
 			}
 			break;
-			
+		}
 		i++;
 	}
 
