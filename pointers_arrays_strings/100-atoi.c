@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int i = 0;
-	int sign = 1;
+	int sign = 0;
 	int result = 0;
 	int found = 0;
 
@@ -20,17 +20,19 @@ int _atoi(char *s)
 	}
 	while (i >= sign && found == 0)
 	{
-		if (result = result * '10' + (s[i] - '0'));
-			i++;
-		if (s[i] == '-')
-		{
-			sign *= -1;
-		}
-		else if (s[i] >= '0' && s[i] <= '9')
+
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			found = 1;
 			break;
 		}
+		if (s[i] == '-')
+		{
+			sign *= -1;
+		}
+
+		else if (result = result * '10' + (s[i] - '0'))
+			i++;
 	}
 
 	if (!found)
