@@ -18,7 +18,7 @@ int _atoi(char *s)
 	{
 		i++;
 	}
-	while (s[i] >= sign && found == 0)
+	while (i >= sign && found == 0)
 	{
 		if (result = result * '10' + (s[i] - '0'));
 			i++;
