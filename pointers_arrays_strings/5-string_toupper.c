@@ -6,17 +6,17 @@
  *
  * Return: pointer to the modified string
  */
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
 	int i;
 
 	for (i = 0; [i] != '\0'; i++)
 	{
-		if ([i] >= 'a' && [i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			[i] = [i] - 32;
+			str[i] = str[i] - 32;
 		}
 	}
 
-	return ();
+	return (str);
 }
