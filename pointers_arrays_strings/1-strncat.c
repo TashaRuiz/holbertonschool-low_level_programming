@@ -11,23 +11,13 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, j = 0;
+	int a, b;
 
-	/* Find the end of dest */
-	while (dest[i] != '\0')
+	for (a = 0; dest[a] != '\0'; a++)
+		;
+	for (b = 0; b < n && src[b] != '\0'; b++)
 	{
-		i++;
+		dest[a + b] = src[b];
 	}
-
-	/* Append up to n characters from src */
-	while (j < n && src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-
-	/* Null-terminate the result */
-	dest[i] = '\0';
-
 	return (dest);
+}
