@@ -16,19 +16,18 @@ char *cap_string(char *str)
 			cap++;
 
 		if (str[cap - 1] == ' ' ||
-		    str[cap - 1] == '\t' ||
-		    str[cap - 1] == '\n' ||
-		    str[cap - 1] == ',' ||
-		    str[cap - 1] == ';' ||
-		    str[cap - 1] == '.' ||
-		    str[cap - 1] == '!' ||
-		    str[cap - 1] == '?' ||
-		    str[cap - 1] == '"' ||
-		    str[cap - 1] == '(' ||
-		    str[cap - 1] == ')' ||
-		    str[cap - 1] == '{' ||
-		    str[cap - 1] == '}' ||
-		    index == 0)
+			str[cap - 1] == '\t' ||
+			str[cap - 1] == '\n' ||
+			str[cap - 1] == ',' ||
+			str[cap - 1] == ';' ||
+			str[cap - 1] == '.' ||
+			str[cap - 1] == '!' ||
+			str[cap - 1] == '?' ||
+			str[cap - 1] == '"' ||
+			str[cap - 1] == '(' ||
+			str[cap - 1] == ')' ||
+			str[cap - 1] == '{' ||
+			str[cap - 1] == '}' || cap == 0)
 			str[cap] -= 32;
 
 		cap++;
