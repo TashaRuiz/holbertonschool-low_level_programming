@@ -6,12 +6,12 @@
  *
  * Return: factorial of n, or -1 if n is negative
  */
-int facrorial(int num)
+int factorial(int num)
 {
 	if(num < 0)
 		return (-1);
 
-	 if (num > 0)
+	else if (num == 0)
 		return (1);
 
 	else
