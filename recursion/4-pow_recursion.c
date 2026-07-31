@@ -7,7 +7,7 @@
  *
  * Return: x raised to the power of y or -1 if y is negative
  */
-int pow_recursion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
