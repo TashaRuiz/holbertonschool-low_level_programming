@@ -7,17 +7,17 @@
  *
  * Return: 1 if prime, 0 otherwise
  */
-int check_prime(int num, int divisor)
+int check_prime(int n, int divisor)
 {
-	if (divisor * divisor > num)
+	if (divisor * divisor > n)
 	{
 		return (1);
 	}
-	else if (num % divisor == 0)
+	else if (n % divisor == 0)
 	{
 		return (0);
 	}
-	return (check_prime(num, divisor + 1));
+	return (check_prime(n, divisor + 1));
 }
 
 /**
