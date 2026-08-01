@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ *main - Main Header file
+ *@argc: number of commands lines
+ *@argv: numbers of arrays strings
+ *
+ * Return: the numbers of arguments
+ */
 int main(int argc, char *argv[])
 {
 	int i;
