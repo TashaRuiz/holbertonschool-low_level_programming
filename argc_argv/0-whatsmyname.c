@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i //i stand for index
+	int i;
 
 	for (i = 1; i < argc; i++ )
 	{
