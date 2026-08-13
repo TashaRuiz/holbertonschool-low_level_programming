@@ -5,7 +5,7 @@
  *@name: name to be printed
  *@f: function pionter
  *
- *Return: void print_name
+ *Return: void
  */
 void print_name(char *name, viod (*f)(char *))
 {
