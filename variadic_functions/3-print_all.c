@@ -6,21 +6,33 @@
  * print_char - Prints a char type element from va_list.
  * @list: va_list passed to function.
  */
-void print_int(va_list list)
-{
-	printf("%d", va_arg(list, int));
-}
-
-void print_float(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-
 void print_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
 
+/**
+ * print_int - Prints an integer type element from va_list.
+ * @list: va_list passed to function.
+ */
+void print_int(va_list list)
+{
+	printf("%d", va_arg(list, int));
+}
+
+/**
+ * print_float - Prints a float type element from va_list.
+ * @list: va_list passed to function.
+ */
+void print_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+
+/**
+ * print_str - Prints a a string element from va_list.
+ * @list: va_list passed to function.
+ */
 void print_str(va_list list)
 {
 	char *s;
@@ -28,19 +40,28 @@ void print_str(va_list list)
 	s = va_arg(list, char *);
 
 	if (s == NULL)
-	{
 		s = "(nil)";
-	}
 	printf("%s", s);
 }
 
+/**
+ * print_all - Prints anything passed onto it no matter the type.
+ * @format: String of formats given.
+ *
+ * Return: Void.
+ */
 void print_all(const char * const format, ...)
 {
 	unsigned int i, k;
 	va_list print;
 	char *var;
 
-	check storage[] = { { "c", print_char }, { "f", print_float }, { "s", print_str }, { "i", print_int } };
+	check storage[] = {
+		{ "c", print_char },
+		{ "f", print_float },
+		{ "s", print_str },
+		{ "i", print_int }
+	};
 
 	i = 0;
 	var = "";
@@ -49,7 +70,6 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[i / 4] != '\0')
 	{
 		k = i % 4;
-
 		if (storage[k].type[0] == format[i / 4])
 		{
 			printf("%s", var);
