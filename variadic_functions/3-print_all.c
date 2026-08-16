@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 	va_list print;
 	char *var;
 
-	check storage[] = {{ "c", print_char }, { "f", print_float }, { "s", print_str }, { "i", print_int }};
+	check storage[] = { { "c", print_char }, { "f", print_float }, { "s", print_str }, { "i", print_int } };
 
 	i = 0;
 	var = "";
