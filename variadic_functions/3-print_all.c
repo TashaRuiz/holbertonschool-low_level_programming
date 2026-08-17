@@ -38,7 +38,6 @@ void print_str(va_list list)
 	char *s;
 
 	s = va_arg(list, char *);
-
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
@@ -52,7 +51,7 @@ void print_str(va_list list)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, k;
+	unsigned int i, j;
 	va_list print;
 	char *var;
 
@@ -66,14 +65,13 @@ void print_all(const char * const format, ...)
 	i = 0;
 	var = "";
 	va_start(print, format);
-
 	while (format != NULL && format[i / 4] != '\0')
 	{
-		k = i % 4;
-		if (storage[k].type[0] == format[i / 4])
+		j = i % 4;
+		if (storage[j].type[0] == format[i / 4])
 		{
 			printf("%s", var);
-			storage[k].f(print);
+			storage[j].f(print);
 			var = ", ";
 		}
 		i++;
