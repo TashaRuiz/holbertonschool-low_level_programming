@@ -1,6 +1,20 @@
 #include "lists.h"
 
 /**
+ * _strlen - Calculates the length of a string.
+ * @s: The string being measured.
+ *
+ * Return: Integer (Success).
+ */
+int _strlen(const char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
  * add_node - adds a new node at the beginning of a list
  * @head: double pointer to the head of the list
  * @str: string to be added to the new node
@@ -9,25 +23,18 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *new_node;
 
-	if (head == NULL || str == NULL)
-		return (NULL);
-
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-
-	new->str = strdup(str);
-	if (new->str == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 	{
-		free(new);
 		return (NULL);
 	}
 
-	new->len = strlen(str);
-	new->next = *head;
-	*head = new;
+	new_node->str = strdup(str);
+	new_node->len = _strlen(str);
+	new_node->next = *head;
+	*head = new_node;
 
-	return (new);
+	return (new_node);
 }
