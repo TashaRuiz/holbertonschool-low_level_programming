@@ -1,45 +1,46 @@
 #include "lists.h"
 
 /**
- * add_node_end - Adds a new node at the end of a list_t list
- * @head: Pointer to the head of the list
- * @str: String to duplicate and store in the new node
+ * _strlen - Calculates the length of a string.
+ * @s: The string being measured.
  *
- * Return: Address of the new node, or NULL if it failed
+ * Return: Integer Success).
+ */
+int _strlen(const char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
+ * add_node_end - Adds a new node at the end of a list.
+ * @head: Beginning of the list.
+ * @str: New string.
+ *
+ * Return: List.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
-	list_t *current;
+	list_t *new_node, *dup;
 
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
-	{
 		return (NULL);
-	}
 
 	new_node->str = strdup(str);
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
+	new_node->len = _strlen(str);
 	new_node->next = NULL;
 
 	if (*head == NULL)
-	{
 		*head = new_node;
-		return (new_node);
-	}
-
-	current = *head;
-	while (current->next != NULL)
+	else
 	{
-		current = current->next;
+		dup = *head;
+		while (dup->next != NULL)
+			dup = dup->next;
+		dup->next = new_node;
 	}
-
-	current->next = new_node;
-
 	return (new_node);
 }
